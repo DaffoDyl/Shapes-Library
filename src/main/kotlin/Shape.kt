@@ -1,3 +1,3 @@
-abstract class Shape {
-    abstract fun move(deltaX: Double, deltaY: Double)
+interface Shape {
+    fun move(deltaX: Double, deltaY: Double)
 }
