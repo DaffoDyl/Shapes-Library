@@ -1,4 +1,3 @@
-package org.example
-
-class Shape {
+abstract class Shape {
+    abstract fun move(deltaX: Double, deltaY: Double)
 }
