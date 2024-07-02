@@ -12,6 +12,7 @@ class Line(
     fun getPoint1(): Point { return point1.copy() }
     fun getPoint2(): Point { return point2.copy() }
     fun getSlope() : Double {
+        //TODO: Account for negative slope
         return (point2.getY() - point1.getY())/(point2.getX() - point1.getX())
     }
     fun getLength() : Double {
