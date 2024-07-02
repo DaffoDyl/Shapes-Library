@@ -9,8 +9,8 @@ class Line(
         point1.move(deltaX, deltaY)
         point2.move(deltaX, deltaY)
     }
-    fun getPoint1(): Point { return point1 }
-    fun getPoint2(): Point { return point2 }
+    fun getPoint1(): Point { return point1.copy() }
+    fun getPoint2(): Point { return point2.copy() }
     fun getSlope() : Double {
         return (point2.getY() - point1.getY())/(point2.getX() - point1.getX())
     }
