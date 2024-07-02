@@ -6,4 +6,7 @@ class Point(
         x+=deltaX
         y+=deltaX
     }
+    fun clone() : Point {
+        return Point(x,y)
+    }
 }
