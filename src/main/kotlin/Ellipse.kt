@@ -1,3 +1,5 @@
+import kotlin.math.PI
+
 class Ellipse(
     private var center : Point,
     private var radius1 : Double,
@@ -10,8 +12,7 @@ class Ellipse(
     fun getCenter(): Point { return center.copy() }
     fun getRadius1(): Double { return radius1 }
     fun getRadius2(): Double { return radius2 }
-    fun getArea(center: Point, radius1: Double, radius2: Double): Double {
-        //TODO
-        return 0.0
+    fun getArea(): Double {
+        return PI * radius1 * radius2
     }
 }
