@@ -1,9 +1,9 @@
 import kotlin.math.PI
 
-class Ellipse(
+open class Ellipse(
     private var center : Point,
     private var radius1 : Double,
-    private var radius2 : Double
+    private var radius2 : Double = radius1
 
 ): Shape {
     override fun move(deltaX: Double, deltaY: Double) {
