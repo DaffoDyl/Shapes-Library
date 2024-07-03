@@ -1,3 +1,5 @@
+import kotlin.math.abs
+
 class Rectangle(
     private var point1 : Point,
     private var point2 : Point
@@ -8,8 +10,7 @@ class Rectangle(
     }
     fun getPoint1(): Point { return point1.copy() }
     fun getPoint2(): Point { return point2.copy() }
-    fun getArea(point1: Point, point2: Point): Double {
-        //TODO
-        return 0.0
+    fun getArea(): Double {
+        return abs(point2.getX() - point1.getX()) * abs(point2.getY() - point1.getY())
     }
 }
