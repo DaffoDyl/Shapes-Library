@@ -14,5 +14,4 @@ open class Rectangle(
     fun getLowestPoint(): Point { return lowestPoint.copy() }
     fun getXLength(): Double { return xLength }
     fun getYLength(): Double { return yLength }
-
 }
