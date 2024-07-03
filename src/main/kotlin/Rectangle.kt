@@ -1,16 +1,17 @@
 import kotlin.math.abs
 
-class Rectangle(
-    private var point1 : Point,
-    private var point2 : Point
+open class Rectangle(
+    private var lowestPoint : Point,
+    private var xLength : Double,
+    private var yLength : Double = xLength,
 ): Shape {
     override fun move(deltaX: Double, deltaY: Double) {
-        point1.move(deltaX, deltaY)
-        point2.move(deltaX, deltaY)
+        lowestPoint.move(deltaX, deltaY)
     }
-    fun getPoint1(): Point { return point1.copy() }
-    fun getPoint2(): Point { return point2.copy() }
+    fun getLowestPoint(): Point { return lowestPoint.copy() }
+    fun getXLength(): Double { return xLength }
+    fun getYLength(): Double { return yLength }
     fun getArea(): Double {
-        return abs(point2.getX() - point1.getX()) * abs(point2.getY() - point1.getY())
+        return abs(xLength * yLength)
     }
 }
